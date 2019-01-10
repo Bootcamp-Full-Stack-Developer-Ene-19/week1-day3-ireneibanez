@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Day 3</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+
+</head>
+<body>
+
+    <form action="formulario.php" method="POST">
+        <p role="heading" id="customer-information">Customer Information</p>
+        <div>
+            <label for="name">FIRST NAME</label>
+            <input type="text" id="name">
+            
+            <label for="surname">LAST NAME</label>
+            <input type="text" id="surname">
+        </div>
+        <div>
+            <label for="adress">ADRESS</label>
+            <input type="text" id="adress">
+        </div>
+        <div>
+           
+            <label for="selectcountry">COUNTRY</label>
+            <select id="country">     
+                <option>Select your Country</option>
+                <option value="country">Spain</option>
+                <option value="country">Argentina</option>
+                <option value="country">France</option>
+            </select>
+            
+        </div>
+
+        <div>
+            <label for="city">CITY</label>
+            <input type="text" id="city">
+        </div>
+
+        <div>
+            <label for="zip">POSTAL CODE</label>
+            <input type="search" id="zip">
+            <button type="menu">FIND</button>
+        </div>
+        
+        <div>
+            <label for="tel">PHONE</label>
+            <input type="tel" id="tel">
+        </div>
+
+        <div>
+            <a href="#">Return to shop</a>
+            <button type="submit">CONTINUE TO SHIPPING</button>
+        </div>
+</form>
+    
+</body>
+</html>

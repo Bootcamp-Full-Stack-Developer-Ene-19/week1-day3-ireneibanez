@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Day 3 Part 2</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+
+</head>
+<body>
+
+    <form action="formulario.php" method="POST">
+
+        <p role="heading" id="shipping-information">Shipping Information</p>
+        <fieldset>
+            <div>
+                <address>
+                    Jamy Larson<br>
+                    Unit 2 Green Mount Retail Park<br>
+                    Halifax<br>
+                    HX1 5QN<br>
+                    Tel:  0344 332 5931
+                </address>
+                <button type="button" id="edit-address">Edit Address</button>
+                <button type="button" id="add-new-address">Add new</button>
+            </div>
+            <div>
+                <img src="images/checkout/map.png" alt="Mapa de localización del sitio de envío">
+            </div>
+
+        </fieldset>
+
+        <p role="heading" id="shipping-method">Shipping Method</p>
+
+        <div>
+            <label for="standard-delivery">Standard Delivery</label>
+            <input type="radio" id="standard-delivery" name="delivery" checked>
+            <p>Free</p>
+            <p>Estimated 14-20 Day Shipping (Duties and taxes may be due upon delivery)</p>
+        </div>
+
+        <div>
+            <label for="fast-delivery">Fast delivery</label>
+            <input type="radio" id="fast-delivery" name="delivery">
+            <p>€ 8.00</p>
+            <p>Estimated 2-5 Days Shipping (Duties and taxes may be due upon delivery)</p>
+        </div>
+        
+        <div>
+            <a href="day3.html">Back to Customer Info</a>
+            <button type="submit">Continue to Payment</button>
+        </div>
+
+    </form>
+    
+</body>
+</html>
