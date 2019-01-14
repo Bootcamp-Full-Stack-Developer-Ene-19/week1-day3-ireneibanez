@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Day 3 Part 2</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <link rel="stylesheet" href="toggler.css" />
 
 </head>
 <body>
@@ -53,6 +53,58 @@
         </div>
 
     </form>
+
+    <section>
+            <div>
+                <h1>Shopping Cart</h1>
+                <span>2</span>
+            </div>
+            <div>
+                <img src="images/checkout/producto-2.jpg" alt="">
+                <p>Lightweight College Backpack</p>
+                <p>€ 99.90</p>
+            </div>
+            <div>
+                <img src="images/checkout/producto-1.jpg" alt="">
+                <p>Business Casual Leather Watch Waterproof</p>
+                <p>€69.90</p>
+            </div>
+    
+            <div class="dropdown">
+                <a href="#" role="button" class="dropdown__btn" id="dropdownMenuButton" aria-haspopup="true" aria-expanded="false">Have a Voucher? </a>
+                <div class="dropdown__menu" aria-labelledby="dropdownMenuButton">
+                    <form action="form_discount_code.php" method="POST">
+                        <label for="discount_code">Introduce tu código de descuento</label>
+                        <input type="text" id="discount_code">
+                        <button type="submit">Aplicar</button>
+                    </form>
+                </div>
+            </div>
+            
+            <table>
+                <tbody>
+                    <tr>
+                        <th>Subtotal</th>
+                        <td>€169.80</td>
+                    </tr>
+    
+                    <tr>
+                        <th>Shipping</th>
+                        <td>Free/td>
+                    </tr>
+                </tbody>
+    
+                <tfoot>
+                    <tr>
+                        <th>Total</th>
+                        <td>€169.80</td>
+                    </tr>
+                </tfoot>
+               
+            </table>
+    
+        </section>
+    <script src="toggler.js"></script>
     
 </body>
 </html>
