@@ -8,44 +8,47 @@
     <link rel="stylesheet" href="toggler.css" />
 </head>
 <body>
-    <form action="formulario.php" method="post">
-        <p role="heading" id="payment-selection">Payment Selection</p>
-        <fieldset>
+    <main>
+        <form action="formulario.php" method="post">
+            <p role="heading" id="payment-selection">Payment Selection</p>
+            <fieldset>
+                <div>
+                    <input type="radio" name="payment-type" id="payment-type-card" value="Credit Card" checked>
+                    <label for="payment-type-card" aria-describedby="desCreditCard">Credit Card</label>
+                    <img src="images/checkout/cards.png" alt="listado de tarjetas de crédito">
+                    <p id="desCreditCard">Safe money transfer using your bank account. Visa, Maestro, Discover, American Express.</p>
+                </div>
+                <div>
+                    <label for="card-number">CARD NUMBER</label>
+                    <input type="number" name="card-number" id="card-number" placeholder="0000 0000 0000 0000">
+                </div>
+                <div>
+                    <label for="card-name">NAME ON CARD</label>
+                    <input type="text" name="card-name" id="card-name">
+
+                    <label for="card-expire-date">EXPIRY DATE</label>
+                    <input type="date" name="card-expire-date" id="card-expire-date" placeholder="MM/YY">
+
+                    <label for="card-cvv-code">CVV CODE</label>
+                    <input type="number" name="card-cvv-code" id="card-cvv-code" maxlength="3">
+                    <button type="">?</button>
+                </div>
+            </fieldset>
+
             <div>
-                <input type="radio" name="payment-type" id="payment-type-card" value="Credit Card" checked>
-                <label for="payment-type-card">Credit Card</label>
-                <img src="images/checkout/cards.png" alt="listado de tarjetas de crédito">
-                <p>Safe money transfer using your bank account. Visa, Maestro, Discover, American Express.</p>
+                <input type="radio" name="payment-type" id="payment-type-paypal" value="PayPal" checked>
+                <label for="payment-type-paypal" aria-describedby="descPayPal">PayPal</label>
+                <img src="images/checkout/paypal.png" alt="logo de paypal">
+                <p id="descPayPal">You will be redirected to PayPal website to complete your purchase securely.</p>
             </div>
+
             <div>
-                <label for="card-number">CARD NUMBER</label>
-                <input type="number" name="card-number" id="card-number" placeholder="0000 0000 0000 0000">
+                <a href="day3part2.html">Back to Shipping Info</a>
+                <button type="submit">Complete Order</button>
             </div>
-            <div>
-                <label for="card-name">NAME ON CARD</label>
-                <input type="text" name="card-name" id="card-name">
+        </form>
 
-                <label for="card-expire-date">EXPIRY DATE</label>
-                <input type="date" name="card-expire-date" id="card-expire-date" placeholder="MM/YY">
-
-                <label for="card-cvv-code">CVV CODE</label>
-                <input type="number" name="card-cvv-code" id="card-cvv-code">
-                <button type="">?</button>
-            </div>
-        </fieldset>
-
-        <div>
-            <input type="radio" name="payment-type" id="payment-type-paypal" value="PayPal" checked>
-            <label for="payment-type-paypal">PayPal</label>
-            <img src="images/checkout/paypal.png" alt="logo de paypal">
-            <p>You will be redirected to PayPal website to complete your purchase securely.</p>
-        </div>
-
-        <div>
-            <a href="day3part2.html">Back to Shipping Info</a>
-            <button type="submit">Complete Order</button>
-        </div>
-    </form>
+    </main>
 
     <section>
             <div>

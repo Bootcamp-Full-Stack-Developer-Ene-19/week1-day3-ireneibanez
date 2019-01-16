@@ -9,55 +9,56 @@
 
 </head>
 <body>
-
-    <form action="formulario.php" method="POST">
-        <p role="heading" id="customer-information">Customer Information</p>
-        <div>
-            <label for="name">FIRST NAME</label>
-            <input type="text" id="name">
+    <main>
+        <form action="formulario.php" method="POST">
+            <p role="heading" id="customer-information">Customer Information</p>
+            <div>
+                <label for="name">FIRST NAME</label>
+                <input type="text" id="name">
+                
+                <label for="surname">LAST NAME</label>
+                <input type="text" id="surname">
+            </div>
+            <div>
+                <label for="adress">ADRESS</label>
+                <input type="text" id="adress">
+            </div>
+            <div>
             
-            <label for="surname">LAST NAME</label>
-            <input type="text" id="surname">
-        </div>
-        <div>
-            <label for="adress">ADRESS</label>
-            <input type="text" id="adress">
-        </div>
-        <div>
-           
-            <label for="selectcountry">COUNTRY</label>
-            <select id="country">     
-                <option>Select your Country</option>
-                <option value="country">Spain</option>
-                <option value="country">Argentina</option>
-                <option value="country">France</option>
-            </select>
+                <label for="selectcountry">COUNTRY</label>
+                <select id="country">     
+                    <option>Select your Country</option>
+                    <option value="country">Spain</option>
+                    <option value="country">Argentina</option>
+                    <option value="country">France</option>
+                </select>
+                
+            </div>
+
+            <div>
+                <label for="city">CITY</label>
+                <input type="text" id="city">
+            </div>
+
+            <div>
+                <label for="zip">POSTAL CODE</label>
+                <input type="search" id="zip">
+                <button type="menu">FIND</button>
+            </div>
             
-        </div>
+            <div>
+                <label for="tel">PHONE</label>
+                <input type="tel" id="tel">
+            </div>
 
-        <div>
-            <label for="city">CITY</label>
-            <input type="text" id="city">
-        </div>
+            <div>
+                <a href="#">Return to shop</a>
+                <button type="submit">CONTINUE TO SHIPPING</button>
+            </div>
+        </form>
+    </main> 
 
-        <div>
-            <label for="zip">POSTAL CODE</label>
-            <input type="search" id="zip">
-            <button type="menu">FIND</button>
-        </div>
-        
-        <div>
-            <label for="tel">PHONE</label>
-            <input type="tel" id="tel">
-        </div>
-
-        <div>
-            <a href="#">Return to shop</a>
-            <button type="submit">CONTINUE TO SHIPPING</button>
-        </div>
-    </form>
-
-    <section>
+    <aside>
         <div>
             <h1>Shopping Cart</h1>
             <span>2</span>
@@ -106,7 +107,7 @@
            
         </table>
 
-    </section>
+    </aside>
 <script src="toggler.js"></script>
 </body>
 </html>
