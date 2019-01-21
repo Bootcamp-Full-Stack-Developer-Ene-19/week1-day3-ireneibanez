@@ -7,6 +7,23 @@
   position: relative;
 }
 
+.dropdown--inline{
+  display: inline-block;
+}
+
+.dropdown__btn{
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+.dropdown__btn:focus{
+  outline: 0;
+}
+
 .dropdown__menu {
   position: absolute;
   top: 100%;

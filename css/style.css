@@ -1,0 +1,165 @@
+@import "reset.css";
+@import "toggler.css";
+@import url('https://fonts.googleapis.com/css?family=Sarabun:400,600');
+
+
+body {
+    font-family: 'Sarabun', sans-serif;
+}
+
+main {
+    width: 100%;
+    padding: 72px 128px 120px 128px;
+
+}
+
+/* ------------------------------------------------------
+-------------------------------------------rastro de migas*/
+.breadcrumbs {
+    border-bottom: 1px #d4d9dd solid;
+    margin-bottom: 71px;
+    padding-bottom: 30px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.breadcrumbs li {
+    font-weight: 600;
+    font-size: 14px;
+    color: #1b2125;
+    text-align: center;
+    display: inline-block;
+}
+
+ol:first-child {
+    margin-right: 110px;
+}
+
+ol:last-child {
+    margin-left: 94px;
+}
+
+
+
+/* ------------------------------------------------------
+--------------------------------------------CHECKOUT 01*/
+
+
+.container {
+    display: flex;
+}
+
+.data__heading {
+    font-size: 24px;
+    color: #1b2125;
+}
+
+.data__label {
+    font-weight: 600;
+    font-size: 12px;
+    color: #d4d9dd;
+    display: block;
+}
+
+.data__control {
+    border-color: #dde3e8;
+    background-color: #fff;
+    max-width: 346px;
+    height: 54px;
+    display: block;
+}
+
+.data__control--wider {
+    max-width: 714px;
+}
+
+.button {
+    color: #fff;
+    background-color: #0077e2;
+    font-size: 14px;
+    max-width: 250px;
+    height: 54px;
+    border-radius: 3px solid rgba(120, 137, 149, 0.26);
+}
+
+.link {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 16px;
+    color: #788995;
+}
+
+.link::before {
+    content: ""
+}
+
+
+
+/* ------------------------------------------------------
+--------------------------------------------carrito*/
+
+.cart {
+    background-color: #f8fafb;
+    max-width: 390px;
+    min-height: 100%;
+    padding: 62px 50px 0 50px;
+}
+
+.cart__products {
+    list-style: none;
+}
+
+
+.cart__products__link {
+    text-decoration: none;
+    max-width: 179px;
+    color: #788995;
+    font-size: 16px;
+    margin-bottom: 21px;
+}
+
+.cart__products li {
+    min-height: 100px;
+}
+
+.cart__products__link__img {
+    float: left;
+}
+
+.cart__products__link__price {
+    font-weight: 600;
+    font-size: 14px;
+    display: block;
+}
+
+.cart-form {
+    display: hidden;
+}
+
+.button__triangle-down {
+    background-color: #f8fafb;
+    color: #1b2125;
+    font-size: 14px;
+    padding: 13px 0 17px 0;
+    border: none;
+}
+
+.button__triangle-down:active {
+    border: 0;
+}
+
+.cart__voucher-container__button {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #e4eaee;
+    border-top: 1px solid #e4eaee;
+    border-left: 0px;;
+    border-right: 0px;
+}
+
+
+.lnr-chevron-down {
+    color: #1b2125;
+    width: 7px;
+    height: 7px;
+  }

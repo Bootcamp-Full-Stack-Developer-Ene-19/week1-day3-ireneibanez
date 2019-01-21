@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Page Title</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -15,9 +16,9 @@
 
       <!-- Breadcrumbs -->
       <ol aria-label="Rastro de migas" class="breadcrumbs">
-        <li>Customer info</li>
-        <li aria-current="true">Shipping info</li>
-        <li>Payment selection</li>
+        <li>CUSTOMER INFO</li>
+        <li aria-current="true">SHIPPING INFO</li>
+        <li>PAYMENT SELECTION</li>
       </ol>
 
 
@@ -37,7 +38,7 @@
             <a href="#" class="location--highlighted">Add New</a>
           </div>
           <div class="col">
-            <img src="..." alt="" class="map">
+            <img src="images/map.png" alt="" class="map">
           </div>
         </div>
       </article>
@@ -58,7 +59,7 @@
 
         <div>
           <a href="#" class="link">Back to Customer Info</a>
-          <button type="submit" class="button button--submit">Continue to payment</button>
+          <button type="submit" class="button">Continue to payment</button>
         </div>
       </form>
 
@@ -69,26 +70,26 @@
       <h1 class="data__heading">Shopping Cart <span aria-label="Número de productos">2</span></h1>
       <ul class="cart__products">
         <li>
-          <a href="#" class="cart__products__link>
-            <img src="..." alt="" class="cart__products__link__img">
+          <a href="#" class="cart__products__link">
+            <img src="images/producto-2.jpg" alt="" height="88" width="88" class="cart__products__link__img">
             Lightweight College Backpack
             <span aria-label="precio" class="cart__products__link__price">€ 99.90</span>
           </a>
         </li>
         <li>
-          <a href="#" class="cart__products__link>
-            <img src="..." alt="" class="cart__products__link__img">
+          <a href="#" class="cart__products__link">
+            <img src="images/producto-1.jpg" alt="" height="87" width="87" class="cart__products__link__img">
             Business Casual Leather Watch Waterproof
             <span aria-label="precio"class="cart__products__link__price">€ 69.90</span>
           </a>
         </li>
       </ul>
       <div>
-        <button type="button" class="button button--triangle-down">Have a Voucher?</button>
+        <button type="button" class="button__triangle-down">Have a Voucher?</button>
         <form action="" class="cart-form">
           <label for = "code" class="cart-form__label">Insert vaucher code</label>
           <input type="text" id="code"class="cart-form__input">
-          <button type="submit" class="button button--cart">Submit</button>
+          <button type="submit" class="button__cart">Submit</button>
         </form>
       </div>
       <table class="total">
@@ -108,6 +109,8 @@
       </table>
     </aside>
   </div> <!-- //.container -->
+
+  <script src="js/toggler.js"></script>
 
 </body>
 
