@@ -7,16 +7,19 @@ body {
     font-family: 'Sarabun', sans-serif;
 }
 
-main {
-    width: 100%;
-    padding: 72px 128px 120px 128px;
+.container {
+    width: 1180px;
+    position: relative;
+}
 
+main {
+    width: 714px;
+    margin: auto;
 }
 
 /* ------------------------------------------------------
 -------------------------------------------rastro de migas*/
 .breadcrumbs {
-    border-bottom: 1px #d4d9dd solid;
     margin-bottom: 71px;
     padding-bottom: 30px;
     display: flex;
@@ -24,20 +27,24 @@ main {
 }
 
 .breadcrumbs li {
+    width: 100%;
     font-weight: 600;
     font-size: 14px;
-    color: #1b2125;
+    color: #dde3e8;
     text-align: center;
     display: inline-block;
+    border-bottom: 1px #d4d9dd solid;
 }
 
+.breadcrumbs li[aria-current] {
+    color: black;
+    border-bottom: 1px solid black;
+}
 
 /* ------------------------------------------------------
 --------------------------------------------CHECKOUT 01*/
-
-
-.container {
-    display: flex;
+.data {
+    padding: auto;
 }
 
 .data__heading {
@@ -53,23 +60,41 @@ main {
 }
 
 .data__control {
-    border-color: #dde3e8;
+    border: 1px solid #dde3e8;
     background-color: #fff;
-    max-width: 346px;
+    width: 350px;
     height: 54px;
     display: block;
 }
 
-.data__control--wider {
-    max-width: 714px;
+.data__control--code {
+    width: 274px;
+    float: left;
 }
-.name {
+
+.data__control--code::after {
+    content: "";
+    display: inline-block;
+    clear: both;
+}
+
+.data__control:focus {
+    border-color: #71b6ef;
+}
+
+.data__control--wider{
+    min-width: 714px;
+}
+
+.name, .country-city, .code-phone{
+    margin: auto;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .address {
-    width: 100%{}
+   margin: auto;
+    width: 100%;
 }
 
 .button {
@@ -81,18 +106,20 @@ main {
     border-radius: 3px solid rgba(120, 137, 149, 0.26);
 }
 
+.data__button {
+    width: 76px;
+    height: 54px;
+    color: #0095f8;
+    border: 1px solid #dde3e8;
+    background-color: #fff;
+}
+
 .link {
     display: inline-block;
     text-decoration: none;
     font-size: 16px;
     color: #788995;
 }
-
-.link::before {
-    content: ""
-}
-
-
 
 /* ------------------------------------------------------
 --------------------------------------------carrito*/
@@ -102,10 +129,23 @@ main {
     max-width: 390px;
     min-height: 100%;
     padding: 62px 50px 0 50px;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+aside .data__heading {
+    border-bottom: 1px solid #e4eaee;
+    padding-bottom: 25px;
 }
 
 .cart__products {
     list-style: none;
+}
+
+.cart__products li:first-child {
+    margin-top: 46px;
+    margin-bottom: 21px;
 }
 
 
@@ -121,8 +161,10 @@ main {
     min-height: 100px;
 }
 
+
 .cart__products__link__img {
     float: left;
+    margin-right: 25px;
 }
 
 .cart__products__link__price {
@@ -131,9 +173,20 @@ main {
     display: block;
 }
 
-.cart-form {
-    display: hidden;
+.cart__products::after {
+    content: "";
+    display: inline-block;
+    clear: both;
 }
+
+
+.cart__voucher-container {
+    border-bottom: 1px solid #e4eaee;
+    border-top: 1px solid #e4eaee;
+    border-left: 0px;;
+    border-right: 0px;
+}
+
 
 .button__triangle-down {
     background-color: #f8fafb;
@@ -143,22 +196,16 @@ main {
     border: none;
 }
 
-.button__triangle-down:active {
-    border: 0;
-}
-
-.cart__voucher-container__button {
-    display: flex;
-    justify-content: space-between;
-    border-bottom: 1px solid #e4eaee;
-    border-top: 1px solid #e4eaee;
-    border-left: 0px;;
-    border-right: 0px;
-}
-
-
 .lnr-chevron-down {
     color: #1b2125;
     width: 7px;
     height: 7px;
   }
+
+
+.total > tr > th {
+    color: #788995;
+    font-size: 14px;
+}
+
+

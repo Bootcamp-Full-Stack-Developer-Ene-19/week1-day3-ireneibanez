@@ -9,8 +9,9 @@
   <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
 </head>
 <body>
-  
+
   <div class="container">
+  
     <main>
 
       <!-- Breadcrumbs -->
@@ -24,64 +25,66 @@
       <form action="" class="data">
         <h1 class="data__heading" >Customer Information</h1>
 
-      <div class="name">
-        <div>
-          <label for="firstName" class="data__label" >FIRST NAME</label>
-          <input type="text" id="firstName" class="data__control">
-        </div>
-        <div>
-          <label for="LastName" class="data__label">LAST NAME</label>
-          <input type="text" id="LastName" class="data__control">
-        </div>
-      </div>
-      
-      
-      <div class="address">
-        <label for="address" class="data__label" >ADRESS</label>
-        <input type="text" id="address" class="data__control data__control--wider">
-      </div>
-       
 
-      <div class="country-city">
-        <div>
-          <label for="country" class="data__label">COUNTRY</label>
-          <select id="country" class="data__control data__control--select">
-            <option>Seleccionar&hellip;</option>
-            <option value="">....</option>
-          </select>
+        <div class="name">
+          <div>
+            <label for="firstName" class="data__label" >FIRST NAME</label>
+            <input type="text" id="firstName" class="data__control">
+          </div>
+          <div>
+            <label for="LastName" class="data__label">LAST NAME</label>
+            <input type="text" id="LastName" class="data__control">
+          </div>
         </div>
-        <div>
-          <label for="city" class="data__label">CITY</label>
-          <input type="text" id="city" class="data__control">
+          
+          
+        <div class="address">
+          <label for="address" class="data__label" >ADDRESS</label>
+          <input type="text" id="address" class="data__control data__control--wider">
         </div>
-      </div>
+        
 
-
-      <div class="code-phone">
-        <div>
-          <label for="postalcode" class="data__label">POSTAL CODE</label>
-          <input type="number" maxlength="5" id="postalcode" class="data__control data__control--code">
-          <button type="button" class="data__button">Find</button>
+        <div class="country-city">
+          <div>
+            <label for="country" class="data__label">COUNTRY</label>
+            <select id="country" class="data__control data__control--select">
+              <option>Seleccionar&hellip;</option>
+              <option value="">....</option>
+            </select>
+          </div>
+          <div>
+            <label for="city" class="data__label">CITY</label>
+            <input type="text" id="city" class="data__control">
+          </div>
         </div>
-        <div>
-          <label for="phone" class="data__label">PHONE</label>
-          <input type="tel" id="phone" class="data__control">
-        </div>
-      </div>
 
 
-        <div>
+        <div class="code-phone">
+          <div>
+            <label for="postalcode" class="data__label">POSTAL CODE</label>
+            <input type="number" maxlength="5" id="postalcode" class="data__control data__control--code">
+            <button type="button" class="data__button">Find</button>
+          </div>
+          <div>
+            <label for="phone" class="data__label">PHONE</label>
+            <input type="tel" id="phone" class="data__control">
+          </div>
+        </div>
+
+
+        <div class="actions">
           <a href="#" class="link">Return to Shop</a>
           <button type="submit" class="button">Continue to Shipping</button>
         </div>
 
       </form>
-
     </main>
+
 
     <!-- Resumen carrito -->
     <aside class="cart">
-      <h1 class="data__heading">Shopping Cart <span aria-label="Número de productos">(2)</span></h1>
+      <h1 class="data__heading">Shopping Cart <span aria-label="Número de productos"></span></h1>
+      
       <ul class="cart__products">
         <li>
           <a href="#" class="cart__products__link">
@@ -98,18 +101,11 @@
           </a>
         </li>
       </ul>
+      
       <div class="cart__voucher-container">
-        <div class="cart__voucher-container__button">
-          <button type="button" class="button__triangle-down">Have a Voucher?</button>
-          <span class="lnr lnr-chevron-down"></span>
-        </div>
-        
-        <form action="" class="cart-form">
-          <label for="code" class="cart-form__label">Insert voucher code</label>
-          <input type="text" id="code" class="cart-form__input">
-          <button type="submit" class="button__cart">Submit</button>
-        </form>
+          <button type="button" class="button__triangle-down">Have a Voucher? <span class="lnr lnr-chevron-down"></span></button>
       </div>
+      
       <table class="total">
         <caption class="sr-only">Totales del carrito</caption>
         <tr>
@@ -125,8 +121,10 @@
           <td>€ 169.80</td>
         </tr>
       </table>
+
     </aside>
-  </div> <!-- //.container -->
+
+  </div>
 <script src="js/toggler.js"></script>
 
 </body>
