@@ -8,33 +8,38 @@ body {
 }
 
 .container {
-    width: 1180px;
-    position: relative;
+    max-width: 1180px;
+    margin: auto;
 }
 
 main {
     width: 714px;
-    margin: auto;
 }
-
 /* ------------------------------------------------------
 -------------------------------------------rastro de migas*/
 .breadcrumbs {
-    margin-bottom: 71px;
-    padding-bottom: 30px;
+    list-style: none;
+    margin-top: 72px;
     display: flex;
     justify-content: space-around;
+    counter-reset: number-ol;
+}
+
+.breadcrumbs li::before {
+    counter-increment: number-ol;
+    content: "0" counter(number-ol) " ";
 }
 
 .breadcrumbs li {
+    padding-bottom: 30px;
     width: 100%;
     font-weight: 600;
     font-size: 14px;
     color: #dde3e8;
     text-align: center;
-    display: inline-block;
     border-bottom: 1px #d4d9dd solid;
 }
+
 
 .breadcrumbs li[aria-current] {
     color: black;
@@ -43,11 +48,10 @@ main {
 
 /* ------------------------------------------------------
 --------------------------------------------CHECKOUT 01*/
-.data {
-    padding: auto;
-}
 
 .data__heading {
+    margin-top: 72px;
+    margin-bottom: 78px;
     font-size: 24px;
     color: #1b2125;
 }
@@ -86,14 +90,16 @@ main {
     min-width: 714px;
 }
 
-.name, .country-city, .code-phone{
-    margin: auto;
+.name, .country-city, .address, .code-phone {
+    margin-bottom: 33px;
+}
+
+.name, .country-city, .code-phone {
     display: flex;
     justify-content: space-between;
 }
 
 .address {
-   margin: auto;
     width: 100%;
 }
 
@@ -115,10 +121,16 @@ main {
 }
 
 .link {
-    display: inline-block;
     text-decoration: none;
     font-size: 16px;
     color: #788995;
+    width: 250px;
+    height: 54px;
+}
+
+.actions {
+    display: flex;
+    justify-content: space-between;
 }
 
 /* ------------------------------------------------------
@@ -126,8 +138,8 @@ main {
 
 .cart {
     background-color: #f8fafb;
-    max-width: 390px;
-    min-height: 100%;
+    width: 390px;
+    min-height: 100%; /* también se pudee poner bottom = 0 */
     padding: 62px 50px 0 50px;
     position: absolute;
     right: 0;
