@@ -6,8 +6,9 @@
   <title>Page Title</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
 </head>
+
+
 <body>
 
   <div class="container">
@@ -23,7 +24,7 @@
 
       <!-- Form -->
       <form action="" class="data">
-        <h1 class="data__heading" >Customer Information</h1>
+        <h1 class="data__heading data__heading--form" >Customer Information</h1>
 
 
         <div class="name">
@@ -65,7 +66,7 @@
             <input type="number" maxlength="5" id="postalcode" class="data__control data__control--code">
             <button type="button" class="data__button">Find</button>
           </div>
-          <div>
+          <div class="phone">
             <label for="phone" class="data__label">PHONE</label>
             <input type="tel" id="phone" class="data__control">
           </div>
@@ -81,7 +82,7 @@
     </main>
 
     <aside class="cart">
-        <h1 class="data__heading">Shopping Cart <span aria-label="Número de productos"></span></h1>
+        <h1 class="data__heading data__heading--cart">Shopping Cart <span aria-label="Número de productos"></span></h1>
         
         <ul class="cart__products">
           <li>
@@ -101,7 +102,7 @@
         </ul>
         
         <div class="cart__voucher-container">
-            <button type="button" class="button__triangle-down">Have a Voucher? <span class="lnr lnr-chevron-down"></span></button>
+            <button type="button" class="button__triangle-down">Have a Voucher? </button>
         </div>
         
         <table class="total">

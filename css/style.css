@@ -5,6 +5,9 @@
 
 body {
     font-family: 'Sarabun', sans-serif;
+    background-image: url('data:image/jpeg;base64,iVBORw0KGgoAAAANSUhEUgAAAYYAAAABCAQAAABwS8G6AAAAEElEQVR42mNkGAWjYBSAAQAGGgACO4NsdwAAAABJRU5ErkJggg==');
+    background-repeat: repeat-y;
+    background-position-x: right;
 }
 
 .container {
@@ -15,6 +18,7 @@ body {
 main {
     width: 714px;
 }
+
 /* ------------------------------------------------------
 -------------------------------------------rastro de migas*/
 .breadcrumbs {
@@ -27,7 +31,7 @@ main {
 
 .breadcrumbs li::before {
     counter-increment: number-ol;
-    content: "0" counter(number-ol) " ";
+    content: "0"counter(number-ol) " ";
 }
 
 .breadcrumbs li {
@@ -50,10 +54,13 @@ main {
 --------------------------------------------CHECKOUT 01*/
 
 .data__heading {
-    margin-top: 72px;
-    margin-bottom: 78px;
     font-size: 24px;
     color: #1b2125;
+}
+
+.data__heading--form {
+    margin-top: 72px;
+    margin-bottom: 78px;
 }
 
 .data__label {
@@ -66,7 +73,6 @@ main {
 .data__control {
     border: 1px solid #dde3e8;
     background-color: #fff;
-    width: 350px;
     height: 54px;
     display: block;
 }
@@ -86,21 +92,30 @@ main {
     border-color: #71b6ef;
 }
 
-.data__control--wider{
-    min-width: 714px;
-}
-
-.name, .country-city, .address, .code-phone {
+.data__control--wider {
+    width: 100%;
     margin-bottom: 33px;
 }
 
-.name, .country-city, .code-phone {
+.name,
+.country-city,
+.phone {
+    width: 350px;
+}
+
+.name,
+.country-city,
+.adress,
+.code-phone {
+    margin-bottom: 33px;
     display: flex;
     justify-content: space-between;
 }
 
+
 .address {
     width: 100%;
+
 }
 
 .button {
@@ -109,7 +124,14 @@ main {
     font-size: 14px;
     max-width: 250px;
     height: 54px;
-    border-radius: 3px solid rgba(120, 137, 149, 0.26);
+    box-shadow: 0 2px 7px 0 rgba(120, 137, 149, 0.26);
+    border-radius: 3px;
+    border: 0;
+}
+
+.button--smaller {
+    width: 230px;
+    font-weight: 600;
 }
 
 .data__button {
@@ -131,7 +153,21 @@ main {
 .actions {
     display: flex;
     justify-content: space-between;
+    margin-top: 50px;
 }
+
+.actions>.link {
+    display: flex;
+    align-items: center;
+}
+
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
 
 /* ------------------------------------------------------
 --------------------------------------------carrito*/
@@ -139,20 +175,22 @@ main {
 .cart {
     background-color: #f8fafb;
     width: 390px;
-    min-height: 100%; /* también se pudee poner bottom = 0 */
+    min-height: 100%;
+    /* también se pudee poner bottom = 0 */
     padding: 62px 50px 0 50px;
     position: absolute;
     right: 0;
     top: 0;
 }
 
-aside .data__heading {
+.data__heading--cart {
     border-bottom: 1px solid #e4eaee;
     padding-bottom: 25px;
 }
 
 .cart__products {
     list-style: none;
+
 }
 
 .cart__products li:first-child {
@@ -169,11 +207,6 @@ aside .data__heading {
     margin-bottom: 21px;
 }
 
-.cart__products li {
-    min-height: 100px;
-}
-
-
 .cart__products__link__img {
     float: left;
     margin-right: 25px;
@@ -185,7 +218,7 @@ aside .data__heading {
     display: block;
 }
 
-.cart__products::after {
+li a::after {
     content: "";
     display: inline-block;
     clear: both;
@@ -195,7 +228,8 @@ aside .data__heading {
 .cart__voucher-container {
     border-bottom: 1px solid #e4eaee;
     border-top: 1px solid #e4eaee;
-    border-left: 0px;;
+    border-left: 0px;
+    ;
     border-right: 0px;
 }
 
@@ -208,16 +242,164 @@ aside .data__heading {
     border: none;
 }
 
-.lnr-chevron-down {
-    color: #1b2125;
-    width: 7px;
-    height: 7px;
-  }
+/*--------------------
+----------------tabla*/
 
 
-.total > tr > th {
+.table {
+    display: flex;
+
+    width: 290px;
+}
+
+.total {
     color: #788995;
     font-size: 14px;
 }
 
+.total__result {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1b2125;
+}
 
+
+
+
+
+
+
+
+
+/* --------------------- FORM 
+CHECKOUT 03----------------*/
+
+.data__heading--payment {
+    margin-top: 71px;
+    margin-bottom: 35px;
+}
+
+.data__payment__credit-cards,
+.data__paypal {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* Empieza radio azul */
+
+.data__payment__credit-cards__selector>label {
+    display: block;
+    position: relative;
+    padding-left: 32px;
+    cursor: pointer;
+}
+
+.data__payment__credit-cards__selector>label input:checked~.checkmark {
+    border: 2px #0095f8 solid;
+}
+
+.radio__input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 18px;
+    width: 18px;
+    background-color: #fff;
+    border: 1px #d4d9dd solid;
+    border-radius: 50%;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.data__payment__credit-cards__selector>label input:checked~.checkmark:after {
+    display: block;
+}
+
+.data__payment__credit-cards__selector>label .checkmark:after {
+    top: 3px;
+    left: 3px;
+    width: 8px;
+    height: 8px;
+    background-color: #0095f8;
+    border-radius: 50%;
+}
+
+/* Acaba radio azul */
+
+.data__payment,
+.data__paypal {
+    border: 1px solid #dde3e8;
+    border-radius: 3px;
+    background-color: #fff;
+    padding: 35px 40px 38px 40px;
+}
+
+
+.data__payment__credit-cards__selector {
+    display: flex;
+    justify-content: left;
+}
+
+.data__payment__credit-cards__selector>.data__label {
+    color: #1b2125;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.data__payment>div>p,
+.data__paypal>p {
+    line-height: 1.63rem;
+    font-size: 16px;
+    color: #788995;
+    margin-left: 33px;
+    max-width: 480px;
+}
+
+.data__payment__credit-number {
+    margin-top: 30px;
+}
+
+.data__payment__credit-number>.data__control::placeholder {
+    text-indent: 25px;
+}
+
+
+.data__payment__data-card {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.data__control--credit-card {
+    width: 306px;
+}
+
+.data__control--credit-card-exp,
+.data__control--credit-card-cvv {
+    width: 142px;
+}
+
+.data__control--credit-card-exp::placeholder {
+    content: "";
+    text-align: center;
+}
+
+.data__control--cvv::placeholder {
+    content: "";
+    text-indent: 150px;
+}
+
+.data__paypal {
+    margin-top: 11px;
+}
