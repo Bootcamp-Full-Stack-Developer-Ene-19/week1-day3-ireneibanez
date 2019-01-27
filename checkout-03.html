@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Page Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+  <div class="container">
+
+    <main>
+
+      <!-- Breadcrumbs -->
+      <ol aria-label="Rastro de migas" class="breadcrumbs">
+        <li>CUSTOMER INFO</li>
+        <li>SHIPPING INFO</li>
+        <li aria-current="true">PAYMENT SELECTION</li>
+      </ol>
+
+      <!-- Form -->
+      <form action="" class="data">
+        <h1 class="data__heading data__heading--payment">Payment Selection</h1>
+        <fieldset class="data__payment">
+            <div class="data__payment__credit-cards">
+              <div class="data__payment__credit-cards__selector">
+                
+                <label for="creditCard" aria-describedby="descCreditCard" class="data__label">Credit Card
+                  <input type="radio" name="payment" id="creditCard" class="radio__input">
+                  <span class="checkmark"></span>
+                </label>
+              </div>
+              <img src="images/cards.png" alt="" width="100" height="20">
+              <p id="descCreditCard">Safe money transfer using your bank account. Visa, Maestro, Discover, American
+                Express.</p>
+            </div>
+            <div class="data__payment__credit-number">
+              <label for="creditCardNumber" class="data__label">Card number</label>
+              <input type="number" id="creditCardNumber" placeholder="0000 0000 0000 0000" class="data__control data__control--wider">
+            </div>
+
+            <div class="data__payment__data-card">
+              <div>
+                <label for="creditCardName" class="data__label">Name on card</label>
+                <input type="text" id="creditCardName" class="data__control data__control--credit-card-name">
+              </div>
+              <div>
+                <label for="creditCardExpiry" class="data__label">Expiry date</label>
+                <input type="number" id="creditCardExpiry" placeholder="MM/YY" class="data__control data__control--credit-card-exp">
+              </div>
+              <div>
+                <label for="creditCardCVV" class="data__label">CVV Code</label>
+                <input type="number" id="creditCardCVV" maxlength="3" placeholder="?" class="data__control data__control--cvv">
+              </div>
+          </div>  
+        </fieldset>
+
+        <div class="data__paypal">
+          <div class="data__payment__credit-cards__selector">
+            
+            <label for="payPal" aria-describedby="descPayPal" class="data__label">PayPal
+                <input type="radio" name="payment" id="payPal" class="radio__input">
+                <span class="checkmark"></span>
+            </label>
+          </div>
+          <img src="images/paypal.png" alt="" width="90" height="24">
+          <p id="descPayPal">You will be redirected to PayPal website to complete your purchase securely.</p>
+        </div>
+
+        <div class="actions">
+          <a href="#" class="link"><-  Back to Shipping Info</a>
+          <button type="submit" class="button button--smaller">COMPLETE ORDER</button>
+        </div>
+      </form>
+
+      <!-- Resumen carrito -->
+      <aside class="cart">
+        <h1 class="data__heading data__heading--cart">Shopping Cart <span aria-label="Número de productos"></span></h1>
+        
+        <ul class="cart__products">
+          <li>
+            <a href="#" class="cart__products__link">
+              <img src="images/producto-2.jpg" alt="" height="88" width="88" class="cart__products__link__img"> 
+              <div class="cart__products__link__img__data">
+                <span class="cart__products__link__img__data__name">Lightweight College Backpack</span>
+                <span aria-label="precio" class="cart__products__link__img__data__price">€ 99.90</span>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="cart__products__link">
+              <img src="images/producto-1.jpg" alt="" height="87" width="87" class="cart__products__link__img">
+              <div class="cart__products__link__img__data">
+                <span class="cart__products__link__img__data__name">Business Casual Leather Watch Waterproof</span>
+                <span aria-label="precio" class="cart__products__link__img__data__price">€ 69.90</span>
+              </div>
+            </a>
+          </li>
+        </ul>
+        
+        <div class="cart__voucher-container">
+            <button type="button" class="button-voucher">Have a Voucher? </button>
+        </div>
+        
+        <table class="total">
+          <caption class="sr-only">Totales del carrito</caption>
+          <tr>
+            <th scope="row">Subtotal</th>
+            <td>€ 169.80</td>
+          </tr>
+          <tr>
+            <th scope="row">Shipping</th>
+            <td>Free</td>
+          </tr>
+          <tr class="total__result">
+            <th scope="row">Total</th>
+            <td>€ 169.80</td>
+          </tr>
+        </table>
+  
+      </aside>
+
+  </div>
+
+  </main>
+
+
+
+  <script src="js/toggler.js"></script>
+</body>
+
+</html>

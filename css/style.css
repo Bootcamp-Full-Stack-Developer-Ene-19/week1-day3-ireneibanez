@@ -1,0 +1,514 @@
+@import "reset.css";
+@import "toggler.css";
+@import url('https://fonts.googleapis.com/css?family=Sarabun:400,600');
+
+
+body {
+    font-family: 'Sarabun', sans-serif;
+    background-image: url('data:image/jpeg;base64,iVBORw0KGgoAAAANSUhEUgAAAYYAAAABCAQAAABwS8G6AAAAEElEQVR42mNkGAWjYBSAAQAGGgACO4NsdwAAAABJRU5ErkJggg==');
+    background-repeat: repeat-y;
+    background-position-x: right;
+}
+
+ body > .container {
+    width: 85rem;
+}
+
+main {
+    width: 44.625rem;
+    margin: auto;
+    padding-bottom: 7.5rem;
+}
+
+/* ------------------------------------------------------
+-------------------------------------------rastro de migas*/
+.breadcrumbs {
+    list-style: none;
+    margin-top: 4.5rem;
+    display: flex;
+    justify-content: space-around;
+    counter-reset: number-ol;
+}
+
+.breadcrumbs li::before {
+    counter-increment: number-ol;
+    content: "0"counter(number-ol) " ";
+}
+
+.breadcrumbs li {
+    padding-bottom: 1.875rem;
+    width: 100%;
+    font-weight: 600;
+    font-size: 0.875rem;
+    color: #dde3e8;
+    text-align: center;
+    border-bottom: 0.0625rem #d4d9dd solid;
+}
+
+
+.breadcrumbs li[aria-current] {
+    color: black;
+    border-bottom: 0.0625rem solid black;
+}
+
+
+/* ------------------------------------------------------
+--------------------------------------------carrito*/
+
+.cart {
+    background-color: #f8fafb;
+    width: 24.375rem;
+    min-height: 100%;  /* también se puede poner bottom = 0 */
+    padding: 3.875rem 3.125rem 0 3.125rem;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.data__heading--cart {
+    border-bottom: 0.0625rem solid #e4eaee;
+    padding-bottom: 1.5625rem;
+}
+
+.cart__products {
+    list-style: none;
+
+}
+
+.cart__products li:first-child {
+    margin-top: 2.875rem;
+    margin-bottom: 1.3125rem;
+}
+
+
+.cart__products__link {
+    text-decoration: none;
+    max-width: 11.1875rem;
+    display: flex;
+    flex-direction: row;
+}
+
+.cart__products__link__img__data {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap; 
+    align-items: left;   
+    margin-left: 1.5625rem;    
+}
+
+.cart__products__link__img__data__name {
+    margin-bottom: 0.375rem;
+    margin-right: 1.5625rem;
+    display: block;
+    width: 10.75rem;
+    color: #788995;
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
+.cart__products__link__img__data__price {
+    font-weight: 600;
+    font-size: 0.875rem;
+    line-height: 1.71rem;
+    color: #788995;
+    display: block;
+}
+
+.cart__voucher-container {
+    margin-top: 2.8125rem;
+    padding:0.8125rem 0 1.0625rem 0;
+    border-bottom: 0.0625rem solid #e4eaee;
+    border-top: 0.0625rem solid #e4eaee;
+    border-left: 0rem;
+    border-right: 0rem;
+}
+
+.button-voucher {
+    border: 0;
+    background-color:#f8fafb;
+    color: #1b2125;
+    line-height: 1.71rem;
+}
+
+
+/*--------------------tabla del 
+aside-------------------------*/
+
+.sr-only {
+    text-indent: -99999.008px;
+  }
+
+.total {
+    margin-top: 0.875rem;
+    width: 100%;
+    table-layout: auto;
+  }
+
+.total tr {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.875rem;
+    font-size: 0.875rem;
+    color: #788995;
+  }
+  
+.total tr:nth-child(2) {
+    margin-bottom: 1.313rem;
+  }
+  
+.total tr:nth-last-child(1) {
+    font-size: 1rem;
+    color: #1b2125;
+    padding-top: 1.5rem;
+  }
+  
+.total td:nth-last-child(1) {
+    font-weight: 600;
+  }
+  
+.total__result {
+    border-top: 0.063rem solid #e4eaee;
+  }
+
+
+
+/* ------------------------------------------------------
+--------------------------------------------CHECKOUT 01*/
+
+.data__heading {
+    font-size: 1.5rem;
+    color: #1b2125;
+}
+
+.data__heading--form {
+    margin-top: 4.5rem;
+    margin-bottom: 4.875rem;
+}
+
+.data__label {
+    font-weight: 600;
+    font-size: 0.75rem;
+    color: #d4d9dd;
+    display: block;
+}
+
+.data__control {
+    border: 0.0625rem solid #dde3e8;
+    background-color: #fff;
+    height: 3.375rem;
+    display: block;
+}
+
+.data__control--code {
+    width: 17.125rem;
+    float: left;
+}
+
+.data__control--code::after {
+    content: "";
+    display: inline-block;
+    clear: both;
+}
+
+.data__control:focus {
+    border-color: #71b6ef;
+}
+
+.data__control--wider {
+    width: 100%;
+    margin-bottom: 2.0625rem;
+}
+
+.name, .country-city, .adress, .code-phone {
+    margin-bottom: 2.0625rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.name div, .country-city div, .code-phone .phone {
+    width: 49%;
+}
+
+.name div .data__control, .country-city div .data__control, .code-phone .phone .data__control{
+    width: 100%;
+}
+
+.address {
+    width: 100%;
+}
+
+.button {
+    color: #fff;
+    background-color: #0077e2;
+    font-size: 0.875rem;
+    max-width: 15.625rem;
+    height: 3.375rem;
+    box-shadow: 0 0.125rem 0.4375rem 0 rgba(120, 137, 149, 0.26);
+    border-radius: 0.1875rem;
+    border: 0;
+    font-weight: 600;
+    padding: 1.0625rem 2.375rem;
+}
+
+.button--smaller {
+    width: 14.375rem;
+    padding: 1.125rem 2.8125rem;
+}
+
+.data__button {
+    width: 4.75rem;
+    height: 3.375rem;
+    color: #0095f8;
+    border: 0.0625rem solid #dde3e8;
+    background-color: #fff;
+}
+
+.link {
+    text-decoration: none;
+    font-size: 1rem;
+    color: #788995;
+    width: 15.625rem;
+    height: 3.375rem;
+}
+
+.actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3.125rem;
+}
+
+.actions > .link {
+    display: flex;
+    align-items: center;
+}
+
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+/* --------------------- FORM 
+CHECKOUT 02----------------*/
+
+
+article h1 {
+    margin: 4.4375rem 0 2.1875rem 0;
+}
+
+ .shipping-info .container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.shipping-info .col {
+    border: 0.0625rem #dde3e8 solid;
+    min-width: 50%;
+}
+
+address {
+    padding: 1.875rem 0 0 2.5rem;
+    margin-bottom: 0.6875rem;
+}
+
+address + a {
+    padding: 0 0 0 2.5rem;
+}
+
+.shipping-info a {
+    font-weight: 600;
+    text-decoration: none;
+    margin-right: 1.375rem; 
+}
+
+.shipping-info img {
+    max-width: 21.75rem;
+}
+
+.shipping-info .location {
+    color: #788995;
+}
+
+.shipping-info .location--highlighted {
+    color: #0095f8;
+    line-height: 1.5rem;
+}
+
+.shipping-method h1 {
+    margin: 2.8125rem 0 2.1875rem 0;
+}
+
+.shipping-method__container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.shipping-method__way--margin {
+    margin-right: 1.375rem;
+}
+
+.shipping-method__way {
+    border: 0.0625rem solid #dde3e8;
+    border-radius: 0.1875rem;
+    background-color: #fff;
+    font-size: 1rem;
+    color: #788995;
+    line-height: 1.63;
+    padding: 1.8438rem 2.5rem 2.2188rem 2.5rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.shipping-method__way label {
+    color: #1b2125;
+}
+
+.price-span {
+    font-weight: 600;
+    color: #1b2125;
+    margin-left: 4.375rem;
+}
+
+.shipping-method__way p {
+    line-height: 1.63rem;
+    font-size: 1rem;
+    min-width: 14.5rem;
+    margin: 0.625rem 0 0 2.0625rem;
+}
+
+/* --------------------- FORM 
+CHECKOUT 03----------------*/
+
+.data__heading--payment {
+    margin-top: 4.4375rem;
+    margin-bottom: 2.1875rem;
+}
+
+.data__payment__credit-cards,
+.data__paypal {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* Empieza radio azul */
+
+.data__payment__credit-cards__selector > label, .shipping-method__way > label {
+    display: block;
+    position: relative;
+    padding-left: 2rem;
+    cursor: pointer;
+}
+
+.data__payment__credit-cards__selector > label input:checked~.checkmark, .shipping-method__way > label input:checked~.checkmark{
+    border: 0.125rem #0095f8 solid;
+}
+
+.radio__input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 1.125rem;
+    width: 1.125rem;
+    background-color: #fff;
+    border: 0.0625rem #d4d9dd solid;
+    border-radius: 50%;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.data__payment__credit-cards__selector > label input:checked~.checkmark:after, .shipping-method__way > label input:checked~.checkmark:after {
+    display: block;
+}
+
+.data__payment__credit-cards__selector > label .checkmark:after,
+.shipping-method__way > label .checkmark:after{
+    top: 0.1875rem;
+    left: 0.1875rem;
+    width: 0.5rem;
+    height: 0.5rem;
+    background-color: #0095f8;
+    border-radius: 50%;
+}
+
+/* Acaba radio azul */
+
+.data__payment,
+.data__paypal {
+    border: 0.0625rem solid #dde3e8;
+    border-radius: 0.1875rem;
+    background-color: #fff;
+    padding: 2.1875rem 2.5rem 2.375rem 2.5rem;
+}
+
+
+.data__payment__credit-cards__selector {
+    display: flex;
+    justify-content: left;
+}
+
+.data__payment__credit-cards__selector>.data__label {
+    color: #1b2125;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.data__payment>div>p,
+.data__paypal>p {
+    line-height: 1.63rem;
+    font-size: 1rem;
+    color: #788995;
+    margin-left: 2.0625rem;
+    max-width: 30rem;
+}
+
+.data__payment__credit-number {
+    margin-top: 1.875rem;
+}
+
+.data__payment__credit-number>.data__control::placeholder {
+    text-indent: 1.5625rem;
+}
+
+
+.data__payment__data-card {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.data__control--credit-card {
+    width: 19.125rem;
+}
+
+.data__control--credit-card-exp,
+.data__control--credit-card-cvv {
+    width: 8.875rem;
+}
+
+.data__control--credit-card-exp::placeholder {
+    content: "";
+    text-align: center;
+}
+
+.data__control--cvv::placeholder {
+    content: "";
+    text-indent: 9.375rem;
+}
+
+.data__paypal {
+    margin-top: 0.6875rem;
+}

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Page Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+
+<body>
+
+  <div class="container">
+  
+    <main>
+
+      <!-- Breadcrumbs -->
+      <ol aria-label="Rastro de migas" class="breadcrumbs">
+        <li aria-current="true">CUSTOMER INFO</li>
+        <li>SHIPPING INFO</li>
+        <li>PAYMENT SELECTION</li>
+      </ol>
+
+      <!-- Form -->
+      <form action="" class="data">
+        <h1 class="data__heading data__heading--form" >Customer Information</h1>
+
+
+        <div class="name">
+          <div>
+            <label for="firstName" class="data__label" >FIRST NAME</label>
+            <input type="text" id="firstName" class="data__control">
+          </div>
+          <div>
+            <label for="LastName" class="data__label">LAST NAME</label>
+            <input type="text" id="LastName" class="data__control">
+          </div>
+        </div>
+          
+          
+        <div class="address">
+          <label for="address" class="data__label" >ADDRESS</label>
+          <input type="text" id="address" class="data__control data__control--wider">
+        </div>
+        
+
+        <div class="country-city">
+          <div>
+            <label for="country" class="data__label">COUNTRY</label>
+            <select id="country" class="data__control data__control--select">
+              <option>Seleccionar&hellip;</option>
+              <option value="">....</option>
+            </select>
+          </div>
+          <div>
+            <label for="city" class="data__label">CITY</label>
+            <input type="text" id="city" class="data__control">
+          </div>
+        </div>
+
+
+        <div class="code-phone">
+          <div>
+            <label for="postalcode" class="data__label">POSTAL CODE</label>
+            <input type="number" maxlength="5" id="postalcode" class="data__control data__control--code">
+            <button type="button" class="data__button">Find</button>
+          </div>
+          <div class="phone">
+            <label for="phone" class="data__label">PHONE</label>
+            <input type="tel" id="phone" class="data__control">
+          </div>
+        </div>
+
+
+        <div class="actions">
+          <a href="#" class="link"><- Return to Shop</a>
+          <button type="submit" class="button">CONTINUE TO SHIPPING</button>
+        </div>
+
+      </form>
+    </main>
+
+    <aside class="cart">
+        <h1 class="data__heading data__heading--cart">Shopping Cart <span aria-label="Número de productos"></span></h1>
+        
+        <ul class="cart__products">
+          <li>
+            <a href="#" class="cart__products__link">
+              <img src="images/producto-2.jpg" alt="" height="88" width="88" class="cart__products__link__img"> 
+              <div class="cart__products__link__img__data">
+                <span class="cart__products__link__img__data__name">Lightweight College Backpack</span>
+                <span aria-label="precio" class="cart__products__link__img__data__price">€ 99.90</span>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="cart__products__link">
+              <img src="images/producto-1.jpg" alt="" height="87" width="87" class="cart__products__link__img">
+              <div class="cart__products__link__img__data">
+                <span class="cart__products__link__img__data__name">Business Casual Leather Watch Waterproof</span>
+                <span aria-label="precio" class="cart__products__link__img__data__price">€ 69.90</span>
+              </div>
+            </a>
+          </li>
+        </ul>
+        
+        <div class="cart__voucher-container">
+            <button type="button" class="button-voucher">Have a Voucher? </button>
+        </div>
+        
+        <table class="total">
+          <caption class="sr-only">Totales del carrito</caption>
+          <tr>
+            <th scope="row">Subtotal</th>
+            <td>€ 169.80</td>
+          </tr>
+          <tr>
+            <th scope="row">Shipping</th>
+            <td>Free</td>
+          </tr>
+          <tr class="total__result">
+            <th scope="row">Total</th>
+            <td>€ 169.80</td>
+          </tr>
+        </table>
+  
+      </aside>
+  </div>
+
+
+
+<script src="js/toggler.js"></script>
+
+</body>
+</html>

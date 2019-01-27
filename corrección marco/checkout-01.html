@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Page Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+  
+  <div class="container">
+    <main>
+
+      <!-- Breadcrumbs -->
+      <ol aria-label="Rastro de migas">
+        <li aria-current="true">Customer info</li>
+        <li>Shipping info</li>
+        <li>Payment selection</li>
+      </ol>
+
+      <!-- Form -->
+      <form action="">
+        <h1>Customer Information</h1>
+        <div>
+          <label for="firstName">First name</label>
+          <input type="text" id="firstName">
+        </div>
+        <div>
+          <label for="LastName">Last name</label>
+          <input type="text" id="LastName">
+        </div>
+        <div>
+          <label for="address">Address</label>
+          <input type="text" id="address">
+        </div>
+        <div>
+          <label for="country">Country</label>
+          <select id="country">
+            <option>Seleccionar&hellip;</option>
+            <option value="">....</option>
+          </select>
+        </div>
+        <div>
+          <label for="city">City</label>
+          <input type="text" id="city">
+        </div>
+        <div>
+          <label for="postalcode">Posta code</label>
+          <input type="number" maxlength="5" id="postalcode">
+          <button type="button">Find</button>
+        </div>
+        <div>
+          <label for="phone">Phone</label>
+          <input type="tel" id="phone">
+        </div>
+
+        <div>
+          <a href="#">Return to Shop</a>
+          <button type="submit">Continue to Shipping</button>
+        </div>
+      </form>
+
+    </main>
+
+    <!-- Resumen carrito -->
+    <aside>
+      <h1>Shopping Cart <span aria-label="Número de productos">2</span></h1>
+      <ul>
+        <li>
+          <a href="#">
+            <img src="..." alt="">
+            Lightweight College Backpack
+            <span aria-label="precio">€ 99.90</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="..." alt="">
+            Business Casual Leather Watch Waterproof
+            <span aria-label="precio">€ 69.90</span>
+          </a>
+        </li>
+      </ul>
+      <div>
+        <button type="button">Have a Voucher?</button>
+        <form action="">
+          <label for="code">Insert vaucher code</label>
+          <input type="text" id="code">
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+      <table>
+        <caption class="sr-only">Totales del carrito</caption>
+        <tr>
+          <th scope="row">Subtotal</th>
+          <td>€ 169.80</td>
+        </tr>
+        <tr>
+          <th scope="row">Shipping</th>
+          <td>free</td>
+        </tr>
+        <tr class="">
+          <th scope="row">Total</th>
+          <td>€ 169.80</td>
+        </tr>
+      </table>
+    </aside>
+  </div> <!-- //.container -->
+
+</body>
+</html>
