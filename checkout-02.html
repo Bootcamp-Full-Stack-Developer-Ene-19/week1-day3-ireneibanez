@@ -23,7 +23,7 @@
         <li>PAYMENT SELECTION</li>
       </ol>
 
-
+      <!--article shipping info-->
       <article class="shipping-info">
         <h1 class="data__heading">Shipping Information</h1>
         <div class="container">
@@ -48,50 +48,66 @@
       <!-- Form -->
       <form action="" class="shipping-method">
         <h1 class="data__heading">Shipping Method</h1>
-        <div class="shipping-method__way">
-          <input type="radio" name="shipping" id="standard" class="radio__input">
-          <label for="standard" aria-describedby="descStandard">Standard Delivery <span>Free</span></label>
-          <p id="descStandard">Estimated 14-20 Day Shipping (Duties and taxes may be due upon delivery)</p>
-        </div>
-        <div class="shipping-method__way">
-          <input type="radio" name="shipping" id="fast" class="radio__input">
-          <label for="fast" aria-describedby="descFast">Fast Delivery <span>€ 8.00</span></label>
-          <p id="descFast">Estimated 2-5 Days Shipping (Duties and taxes may be due upon delivery)</p>
-        </div>
+        <div class="shipping-method__container">
+          <div class="shipping-method__way shipping-method__way--margin">
 
-        <div class="actions">
-          <a href="#" class="link">Back to Customer Info</a>
-          <button type="submit" class="button">Continue to payment</button>
+            
+            <label for="standard" aria-describedby="descStandard">Standard Delivery
+             <span class="price-span">Free</span>
+             <input type="radio" name="shipping" id="standard" class="radio__input">
+             <span class="checkmark"></span>
+            </label>
+             
+            <p id="descStandard">Estimated 14-20 Day Shipping (Duties and taxes may be due upon delivery)</p>
+          </div>
+
+          <div class="shipping-method__way">
+            
+            <label for="fast" aria-describedby="descFast">
+              Fast Delivery 
+              <span class="price-span">€ 8.00</span>
+              <input type="radio" name="shipping" id="fast" class="radio__input">
+              <span class="checkmark"></span>
+            </label>
+            <p id="descFast">Estimated 2-5 Days Shipping (Duties and taxes may be due upon delivery)</p>
+          </div>
         </div>
       </form>
 
+      <div class="actions">
+        <a href="#" class="link"><- Back to Customer Info</a>
+        <button type="submit" class="button">CONTINUE TO PAYMENT</button>
+      </div>
+      
       <!-- Resumen carrito -->
       <aside class="cart">
-        <h1 class="data__heading">Shopping Cart <span aria-label="Número de productos">2</span></h1>
+        <h1 class="data__heading data__heading--cart">Shopping Cart <span aria-label="Número de productos"></span></h1>
+        
         <ul class="cart__products">
           <li>
             <a href="#" class="cart__products__link">
-              <img src="images/producto-2.jpg" alt="" height="88" width="88" class="cart__products__link__img">
-              Lightweight College Backpack
-              <span aria-label="precio" class="cart__products__link__price">€ 99.90</span>
+              <img src="images/producto-2.jpg" alt="" height="88" width="88" class="cart__products__link__img"> 
+              <div class="cart__products__link__img__data">
+                <span class="cart__products__link__img__data__name">Lightweight College Backpack</span>
+                <span aria-label="precio" class="cart__products__link__img__data__price">€ 99.90</span>
+              </div>
             </a>
           </li>
           <li>
             <a href="#" class="cart__products__link">
               <img src="images/producto-1.jpg" alt="" height="87" width="87" class="cart__products__link__img">
-              Business Casual Leather Watch Waterproof
-              <span aria-label="precio" class="cart__products__link__price">€ 69.90</span>
+              <div class="cart__products__link__img__data">
+                <span class="cart__products__link__img__data__name">Business Casual Leather Watch Waterproof</span>
+                <span aria-label="precio" class="cart__products__link__img__data__price">€ 69.90</span>
+              </div>
             </a>
           </li>
         </ul>
-        <div>
-          <button type="button" class="button__triangle-down">Have a Voucher?</button>
-          <form action="" class="cart-form">
-            <label for="code" class="cart-form__label">Insert vaucher code</label>
-            <input type="text" id="code" class="cart-form__input">
-            <button type="submit" class="button__cart">Submit</button>
-          </form>
+        
+        <div class="cart__voucher-container">
+            <button type="button" class="button-voucher">Have a Voucher? </button>
         </div>
+        
         <table class="total">
           <caption class="sr-only">Totales del carrito</caption>
           <tr>
@@ -100,13 +116,14 @@
           </tr>
           <tr>
             <th scope="row">Shipping</th>
-            <td>free</td>
+            <td>Free</td>
           </tr>
           <tr class="total__result">
             <th scope="row">Total</th>
             <td>€ 169.80</td>
           </tr>
         </table>
+  
       </aside>
 
   </div>

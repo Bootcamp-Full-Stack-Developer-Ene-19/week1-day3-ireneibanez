@@ -10,20 +10,21 @@ body {
     background-position-x: right;
 }
 
-.container {
-    max-width: 1180px;
-    margin: auto;
+ body > .container {
+    width: 85rem;
 }
 
 main {
-    width: 714px;
+    width: 44.625rem;
+    margin: auto;
+    padding-bottom: 7.5rem;
 }
 
 /* ------------------------------------------------------
 -------------------------------------------rastro de migas*/
 .breadcrumbs {
     list-style: none;
-    margin-top: 72px;
+    margin-top: 4.5rem;
     display: flex;
     justify-content: space-around;
     counter-reset: number-ol;
@@ -50,6 +51,127 @@ main {
     border-bottom: 1px solid black;
 }
 
+
+/* ------------------------------------------------------
+--------------------------------------------carrito*/
+
+.cart {
+    background-color: #f8fafb;
+    width: 390px;
+    min-height: 100%;  /* también se puede poner bottom = 0 */
+    padding: 62px 50px 0 50px;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.data__heading--cart {
+    border-bottom: 1px solid #e4eaee;
+    padding-bottom: 25px;
+}
+
+.cart__products {
+    list-style: none;
+
+}
+
+.cart__products li:first-child {
+    margin-top: 46px;
+    margin-bottom: 21px;
+}
+
+
+.cart__products__link {
+    text-decoration: none;
+    max-width: 179px;
+    display: flex;
+    flex-direction: row;
+}
+
+.cart__products__link__img__data {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap; 
+    align-items: left;   
+    margin-left: 25px;    
+}
+
+.cart__products__link__img__data__name {
+    margin-bottom: 6px;
+    margin-right: 25px;
+    display: block;
+    width: 172px;
+    color: #788995;
+    font-size: 16px;
+    line-height: 1.5rem;
+}
+
+.cart__products__link__img__data__price {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.71rem;
+    color: #788995;
+    display: block;
+}
+
+.cart__voucher-container {
+    margin-top: 45px;
+    padding:13px 0 17px 0;
+    border-bottom: 1px solid #e4eaee;
+    border-top: 1px solid #e4eaee;
+    border-left: 0px;
+    border-right: 0px;
+}
+
+.button-voucher {
+    border: 0;
+    background-color:#f8fafb;
+    color: #1b2125;
+    line-height: 1.71rem;
+}
+
+
+/*--------------------tabla del 
+aside-------------------------*/
+
+.sr-only {
+    text-indent: -6249.938rem;
+  }
+
+.total {
+    margin-top: 0.875rem;
+    width: 100%;
+    table-layout: auto;
+  }
+
+.total tr {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.875rem;
+    font-size: 0.875rem;
+    color: #788995;
+  }
+  
+.total tr:nth-child(2) {
+    margin-bottom: 1.313rem;
+  }
+  
+.total tr:nth-last-child(1) {
+    font-size: 1rem;
+    color: #1b2125;
+    padding-top: 1.5rem;
+  }
+  
+.total td:nth-last-child(1) {
+    font-weight: 600;
+  }
+  
+.total__result {
+    border-top: 0.063rem solid #e4eaee;
+  }
+
+
+
 /* ------------------------------------------------------
 --------------------------------------------CHECKOUT 01*/
 
@@ -59,7 +181,7 @@ main {
 }
 
 .data__heading--form {
-    margin-top: 72px;
+    margin-top: 4.5rem;
     margin-bottom: 78px;
 }
 
@@ -97,25 +219,22 @@ main {
     margin-bottom: 33px;
 }
 
-.name,
-.country-city,
-.phone {
-    width: 350px;
-}
-
-.name,
-.country-city,
-.adress,
-.code-phone {
+.name, .country-city, .adress, .code-phone {
     margin-bottom: 33px;
     display: flex;
     justify-content: space-between;
 }
 
+.name div, .country-city div, .code-phone .phone {
+    width: 49%;
+}
+
+.name div .data__control, .country-city div .data__control, .code-phone .phone .data__control{
+    width: 100%;
+}
 
 .address {
     width: 100%;
-
 }
 
 .button {
@@ -127,11 +246,13 @@ main {
     box-shadow: 0 2px 7px 0 rgba(120, 137, 149, 0.26);
     border-radius: 3px;
     border: 0;
+    font-weight: 600;
+    padding: 17px 38px;
 }
 
 .button--smaller {
     width: 230px;
-    font-weight: 600;
+    padding: 18px 45px;
 }
 
 .data__button {
@@ -156,7 +277,7 @@ main {
     margin-top: 50px;
 }
 
-.actions>.link {
+.actions > .link {
     display: flex;
     align-items: center;
 }
@@ -169,107 +290,94 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 
-/* ------------------------------------------------------
---------------------------------------------carrito*/
+/* --------------------- FORM 
+CHECKOUT 02----------------*/
 
-.cart {
-    background-color: #f8fafb;
-    width: 390px;
-    min-height: 100%;
-    /* también se pudee poner bottom = 0 */
-    padding: 62px 50px 0 50px;
-    position: absolute;
-    right: 0;
-    top: 0;
+
+article h1 {
+    margin: 71px 0 35px 0;
 }
 
-.data__heading--cart {
-    border-bottom: 1px solid #e4eaee;
-    padding-bottom: 25px;
-}
-
-.cart__products {
-    list-style: none;
-
-}
-
-.cart__products li:first-child {
-    margin-top: 46px;
-    margin-bottom: 21px;
-}
-
-
-.cart__products__link {
-    text-decoration: none;
-    max-width: 179px;
-    color: #788995;
-    font-size: 16px;
-    margin-bottom: 21px;
-}
-
-.cart__products__link__img {
-    float: left;
-    margin-right: 25px;
-}
-
-.cart__products__link__price {
-    font-weight: 600;
-    font-size: 14px;
-    display: block;
-}
-
-li a::after {
-    content: "";
-    display: inline-block;
-    clear: both;
-}
-
-
-.cart__voucher-container {
-    border-bottom: 1px solid #e4eaee;
-    border-top: 1px solid #e4eaee;
-    border-left: 0px;
-    ;
-    border-right: 0px;
-}
-
-
-.button__triangle-down {
-    background-color: #f8fafb;
-    color: #1b2125;
-    font-size: 14px;
-    padding: 13px 0 17px 0;
-    border: none;
-}
-
-/*--------------------
-----------------tabla*/
-
-
-.table {
+ .shipping-info .container{
     display: flex;
-
-    width: 290px;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
-.total {
-    color: #788995;
-    font-size: 14px;
+.shipping-info .col {
+    border: 1px #dde3e8 solid;
+    min-width: 50%;
 }
 
-.total__result {
-    font-size: 16px;
+address {
+    padding: 30px 0 0 40px;
+    margin-bottom: 11px;
+}
+
+address + a {
+    padding: 0 0 0 40px;
+}
+
+.shipping-info a {
     font-weight: 600;
+    text-decoration: none;
+    margin-right: 22px; 
+}
+
+.shipping-info img {
+    max-width: 348px;
+}
+
+.shipping-info .location {
+    color: #788995;
+}
+
+.shipping-info .location--highlighted {
+    color: #0095f8;
+    line-height: 24px;
+}
+
+.shipping-method h1 {
+    margin: 45px 0 35px 0;
+}
+
+.shipping-method__container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.shipping-method__way--margin {
+    margin-right: 22px;
+}
+
+.shipping-method__way {
+    border: 1px solid #dde3e8;
+    border-radius: 3px;
+    background-color: #fff;
+    font-size: 16px;
+    color: #788995;
+    line-height: 1.63;
+    padding: 29.5px 40px 35.5px 40px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.shipping-method__way label {
     color: #1b2125;
 }
 
+.price-span {
+    font-weight: 600;
+    color: #1b2125;
+    margin-left: 70px;
+}
 
-
-
-
-
-
-
+.shipping-method__way p {
+    line-height: 1.63rem;
+    font-size: 16px;
+    min-width: 232px;
+    margin: 10px 0 0 33px;
+}
 
 /* --------------------- FORM 
 CHECKOUT 03----------------*/
@@ -288,14 +396,14 @@ CHECKOUT 03----------------*/
 
 /* Empieza radio azul */
 
-.data__payment__credit-cards__selector>label {
+.data__payment__credit-cards__selector > label, .shipping-method__way > label {
     display: block;
     position: relative;
     padding-left: 32px;
     cursor: pointer;
 }
 
-.data__payment__credit-cards__selector>label input:checked~.checkmark {
+.data__payment__credit-cards__selector > label input:checked~.checkmark, .shipping-method__way > label input:checked~.checkmark{
     border: 2px #0095f8 solid;
 }
 
@@ -322,11 +430,12 @@ CHECKOUT 03----------------*/
     display: none;
 }
 
-.data__payment__credit-cards__selector>label input:checked~.checkmark:after {
+.data__payment__credit-cards__selector > label input:checked~.checkmark:after, .shipping-method__way > label input:checked~.checkmark:after {
     display: block;
 }
 
-.data__payment__credit-cards__selector>label .checkmark:after {
+.data__payment__credit-cards__selector > label .checkmark:after,
+.shipping-method__way > label .checkmark:after{
     top: 3px;
     left: 3px;
     width: 8px;
