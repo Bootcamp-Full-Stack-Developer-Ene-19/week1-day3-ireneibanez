@@ -5,19 +5,18 @@
 
 body {
     font-family: 'Sarabun', sans-serif;
-    background-image: url('data:image/jpeg;base64,iVBORw0KGgoAAAANSUhEUgAAAYYAAAABCAQAAABwS8G6AAAAEElEQVR42mNkGAWjYBSAAQAGGgACO4NsdwAAAABJRU5ErkJggg==');
+    background-image: url('../images/method-draw-image.svg');
     background-repeat: repeat-y;
     background-position-x: right;
 }
 
  body > .container {
-    width: 85rem;
+    max-width: 85rem;
+    margin: 0 auto;
 }
 
 main {
-    width: 44.625rem;
-    margin: auto;
-    padding-bottom: 7.5rem;
+    max-width: calc(100% - 390px);
 }
 
 /* ------------------------------------------------------
@@ -56,9 +55,7 @@ main {
 --------------------------------------------carrito*/
 
 .cart {
-    background-color: #f8fafb;
-    width: 24.375rem;
-    min-height: 100%;  /* también se puede poner bottom = 0 */
+    max-width: 24.375rem;
     padding: 3.875rem 3.125rem 0 3.125rem;
     position: absolute;
     right: 0;
@@ -83,7 +80,6 @@ main {
 
 .cart__products__link {
     text-decoration: none;
-    max-width: 11.1875rem;
     display: flex;
     flex-direction: row;
 }
@@ -200,7 +196,7 @@ aside-------------------------*/
 }
 
 .data__control--code {
-    width: 17.125rem;
+    width: 24.75rem;
     float: left;
 }
 
